@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Búsqueda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>🔍 Buscador</h1>
+    <nav style="margin-top: 5px;">
+      <a href="index.html" class="filter-btn" style="text-decoration:none; display:inline-block;">← Volver al Inicio</a>
+    </nav>
+  </div>
+
+  <form id="buscador" action="busqueda.html" method="get">
+    <input type="search" name="q" placeholder="Buscar por categoría, título o autor...">
+    <button type="submit">Buscar</button>
+  </form>
+</header>
+
+<main class="dashboard" style="max-width:1200px; margin: 0 auto; padding:0 20px;">
+  <section id="book-container">
+    <h2 id="titulo-resultados" style="margin-bottom: 15px;"></h2>
+
+    <!-- Utiliza exactamente la misma clase grid que index para verse igual de hermoso -->
+    <div id="book-list" class="book-grid">
+      <p class="empty">Buscando libros en la colección…</p>
+    </div>
+  </section>
+</main>
+
+<footer style="text-align:center; margin-top:50px; padding:20px; border-top:1px solid var(--border); color:var(--color-texto-muted);">
+  <p>&copy; 2026 Biblioteca Personal</p>
+</footer>
+
+<script src="busqueda.js"></script>
+<!-- Se incluye app.js únicamente para heredar la funcionalidad global de eliminarLibroEnServidor sin duplicar código -->
+<script src="app.js" defer></script>
+</body>
+</html>
