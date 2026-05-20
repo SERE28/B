@@ -1,0 +1,52 @@
+{
+    "books": [
+        {
+            "isbn": "1981465400",
+            "title": "ese",
+            "author": "adios",
+            "category": "comedia",
+            "type": "novela",
+            "status": "terminado",
+            "progress": "",
+            "rating": "5",
+            "coverUrl": "data:image\/jpeg;base64,\/9j\/4AAQSkZJRgABAQAAAQABAAD\/2wCEAAkGBxIQEhUQEBIVEBUVFRUQEBUPFQ8VFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSktLi8uFx8zODMtNygtLi0BCgoKDg0OGhAQFy0mHyYtLS0tLS0tLS0tLSstLS0tLS0tLS0tKy0tLS0tLS0tLS0tLSstLS0tKy0tLS0tLS0tLf\/AABEIAMIBAwMBIgACEQEDEQH\/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj\/xAA5EAABAwMDAgUCAwcEAgMAAAABAAIRAwQhBRIxQVEGEyJhcYGRMqHBFCNCsdHh8AdSYnIzokNTgv\/EABgBAAMBAQAAAAAAAAAAAAAAAAECAwAE\/8QAIxEBAQACAwEAAgEFAAAAAAAAAAECEQMhMUESE1EEIjJhcf\/aAAwDAQACEQMRAD8A8ZARAEgCe0KVdBrgkYERwTaYytGq205q0dmxUOmtWns2Jq0TKDFZW9NRqFNWduxAw9FiOGJaTEcMRKBsRGMRNiIxiU5GNUim1Na1HptWxDI9rUUNXMCIAqJBwh1Xhok4A7o7gszrGp+vy2wQPxTHPEqeV0fHtfW9UPALSCD2UgNVHo9cT2JxjgrQNCbV+huXw3alLUQBKQtGyRQ1O2p+1P2owKHtQqjFKAQqjVsvGx9RwxKWorWpS1bHxsr2hvaguYprmoTmJiq6sxU9\/TwtBWYqu9pYU8\/FMPWWfSyuVobU9lyhpfbx4BEaEgCI0KtRhjgupjKe4LqYytGq60tq1NkxZrSm8LWWLcJwifQYrKgxRLdisqDUBHpNR2tSU2owaiAe1PY1ODURrUtMQNRWBJtRGBCDl4KwIgCRgRAFWIIt\/U2U3P7NJ+vRef6awvdvdnc7dyenGYgBavxpdBlAMkgvcG45I\/yFR6NZgbQGbjtyDJ68+zVK95qTrFNpn1AtjGfSCPz6\/K1Vs7c0EKmtXOcdpDW9w0zHtwrixZAI7FXs6RxvY8J0JYSwpxS+I5aiALnhOajApsIbwipjgtWx9MAXEJ4CSEYFBc1Dc1SHBMc1EEOoxQq9GVaOagVGJbDSqryFymli5DR9vnoBEaE0BEaFOmjnBJTGU9wSU+Vo2S90oLXWLcBZPSRlbGwGAqUsWVBqsaDVUv3S1rcTO4n+FoEkjuen1Ua6vK3\/AMfoA4mXOPyl3d9TY2ye1q6YRQFj7HxJWpwK1Pe2Y3sHfqtRY6hSrCabgekdZ7LflPK2vsSQERoSAJ7QsLoT2hIlBQno5eDtT5WX1jxraWpLX1NzhI2syZA4Wa1D\/UskhlGns3enc8yWyedv5qm5ENLPxxdbq9KmCPTLunP+E\/ZS9KqO27zAH4ZfEnA\/t\/nGSD3uuS+N4aPSXSZEgE\/X9Vr6DBA9Jc4jdu2gwCcEAdZUccu1rOmgsmNIncCecRA\/RSbQ7QdxAk4nvMAKuDnhoEOdHMkNhAqjzgM5ZlgBMBwzJHdVy5NRLDjtaJKEOg\/c1ru4B+4RAiJlQLmJXprFvofClNKc5MWowq6EqVMSmEJhaikJpCzAOagVGqWQgvCAxEIXIpC5Az5zARGhIAiNCirDXBNpjKK4JlMZWxbJfaT0Wz08YWN0jkLa6eMBVpIsqNEH6hzfuCFGtWtnaQJ9+FPoBBfZF1RxHWHjnrz+qrxfUOeeUtbSw7A4PUEj9eFTXeiGmd9IkE8Fh7dTPK11CHAN\/D3PX2Tby3EYaIiBuyT8lbPCUvHyVndP8UmmfKuCMY39Pr25Wjp6vRI3F4aCYBcQAT7HgrNX+itIwBxMdfsstcUtrXU6jjtcdrW49UZhs\/hPb3C5bvF1y7m2u1vx5QoT5Y84g7TtI28EzKxup+Jr259Rf+z03b4bT5LWgS7vHqn6HsolOw2ENA3CCQ2ImctwOenxKlaBpj7qrUpuBLWgVJGGt5Gxs4iIH2KeaJlapxb0wwyNzt7C4yfwumecEHGf6qwthRaSQd7gcNcA3aAJn9Y9vvaWVFrSWVKRcHvDHATLA5wye4BnHUOb7KZ+xtoVzZgPLpNanvc472NEyHfxQBx\/VDK9NPUKkdrnEtdyR6TI9Q3RzAHpYry28QV2AAAPg+WCQZIBgGJ6ZOUSnSFRp8sB0iZ5c0MpicDMycD291D1B+PLLdnpLW8N6nJ+g4\/5FTsp5Yv7TxbudsrMLQR6SOOA6ZnAzE9+ymPvGMb5lLImZBEe0n6z9Qsm+4JzMS4NYJPAIIGcgYJn39oAqd4S19NziWO9ImNvphokfOfthDd+m1rx6Vod+yvSa5hBjDgP4T2KsV5ToN+60ksduPLuIIPGBwvSNI1FtxTbVb15HY9Qq4Zb6Tyx12muQgURxQHHKpSSDEpgShyQFb608PXJJShMVxTSnpCFgDIQnhHIQnoUYjFckcuSbV0+dwntTQntUlYUpjOUQpjeUcQyXukchbbTuAsVpHIW304YVU4tqAVnatnjkAke46hVtBWFu6IITY3VLnNzQ9FjCdwweoKkloiT\/f4CiUrxrqjqZplpAmZEGeI6x\/RPFaX7QeOREwmvJEpx1VVqUk75DW5k8ewGfyWQ1i5FR5bSYHCQC7b68kYjB9\/otB4pvXvd5TCAzh8R35JgqmpPYwbmkAxv3SN0dGmeOv291zZXdXx6hbbStoD5H4Sd2\/IAORGPSQQ2MEH5lNo2FemBqFo8Vmlk1KOCSzcS4A9SAB2VpU079ps6hZIc9jiMmJmY6finmPySf6Yap51s6i8EPpPLHzg98+\/Q\/VH\/ABmwndU+o6hQLRcB2019rG1QCDTeGGC5nUekDHRvwrDR9JqVr5l86abfKApt5ncGh5zEZPEK91DTKYcXtkR\/taCDAdy3ry7jlGsf3LdrQ\/a2RTaSwgAmA3IB2gH\/ANUuzaZA0X2ur02Nl1Ovnb1wN0fQtWn1vRKMivVhoYS4FwbgmPUZxGAM8wFf\/s9KnSN3UAJptdU3H+EAEmPuV4z4vvri7tv2+5q+Wx1VrbSzg7XslxLnkHLgGg574TY23qly1O41Vrf6e9xYyqw1CYaxkkk4iGtkfaFV6jRFPc6rTqBpkk7DDQ0cn\/aM+6n6ba0H0rO4osDagr2\/lkASW1TD2HuA3cf\/AMrV+LL5tMlhAP8AuB7e4ChLvdV38eYU7lrTNKC0CCM\/WPyWp8D6xsreU50NqCWt7O\/SQsPqOkvBNemMzJaIDe5EfGUmkayG1GCIcHg8cEfoqSfYFvyvfiUGom2lTcwO5kA4Tqitknj65rkoKC1yKhLs1mhQU4ITSngqqNEXFICllYDShVEUoVVCjEQrk6FyTSr52CI1MCI1SqsKUMcohQxytiGS90jkLc6bwsLpByFudNOFdKLeirCiqxlUDlCuNYawcoSjYt7kQRUbG5vfgjq0qtoa7TNQtbiTtdu3YPaOqzuoeJ+jT7KvDAHCsZncHwCZLuwU872OM6WV7UcHH1xuJH4WnG7EDgyPefbKn2+kuqbi+HNjcdzi7MQXCGiDET9lDc7Bc4gN\/E4k4ODtAJPv1xgKTrtK4rafUqUT5TIHmOY3a9zBztHQe\/2Sz1r4kUvGunWf7p1Vziz0\/u2uqAf8ZbLR8Sr\/AMNeJ9OuXltGKb6hiKtN1I1DHQuADjAOJWT1rSLe2tmVKVs26pMayqKfSowNM565Id7wq\/wSW1dMLK8ECnU9XDmhjj5RDuhB4PSAkvNP1zOT7rRdf33F6XrGm7TLeDP8sgjrhUbK4JaCAQIzzGDPweU3wV4mN1aGlWO6rQgFzo3PbkNefcgQfcJbprJ3TEGcRGe6Tm5cePa\/Fx5Zpni2tOl3LGmD5Th8gj+ixvh+hV1CzbRdbGqGAUzBpAHbEGHkQeshTta1VopuYThwLSB1HVF\/07cLakRTc57XfgLjkN7QeCJIhTx5JyyW\/DZ8X47iXpOhGxDKlbbNORa29M7wxxG3zajyBLg2QABgF3MyqDVq290vcam45jLnDtMQIAAx\/OVq9SsPMDoLiHOAJ3EGDnM8jPELJalbOpPwG7iYaSDuwIbHQdVe9dJ4xN\/ZKbqfliA50veIE9Yae3TjsoR0OnTaargwHO3aJMzgoTPDVen+9YdxPqAmAP8AsSJ56yoVarWaQytlzjta0GYPUpb6ePUNGq7qLDn8I5+FJeVVeHp8oSfiVYvcur4h9MByjzhRC7KMHYQwHkEa5FBURrkdpVInYO0p0obSnIkcSh1inlCrcIU2IQXJQlQ0O3zmEQJgRAoV0QpQuqKhHlbFslzpLsha62vQ1vKw9m8hTat2YhWtRi\/vdc6Aqju71z+qggkmSpAhIKMyZB91qgQ5gAxPXplZ4thWlgB5e8u\/DOCY6Jb2MHqPa+rSoHLAfMeOWnaMbmkge85Xo9lrzGtDTFRkQ4NG6RMHAH3leWeGrSo+v57g7LoBI6dhC9CqaKQGuotIOCQ1wAmZnbwD8fda\/wCg\/wCnDTmsBbZXNF1AyW292HRTnpTqNO5recEGFN0Xw\/TECvUouAO8UbZrhS3AwHVHOJNSDxMCcxIBVI2ttPqaQWiQIJ2ujMmMjk5\/VXukkwXuGd3p3bSQD0G369T8pJjjvw13GS1PSXWVxXr0iXBzNrWjAw6c\/G532KHpeqmv6TMngCSSFsrotefLLcPkOcYj4+VBreCazC6rZ1mUy6NgewnaB\/CM8fRcuXD+2606ceX9c3azniHTHBmQ1g6mq4Aif5K18F6W9toHwW7nO2bs4GA5vsYx3VdqRFarSt7oCRVpF46FzXCRHUZXptyxrmBrSWtAgbcY6Qq8X9PvG\/A5uaYZT7v6yVCpcOLP3Lz\/APYSA2ekw53vPPdHuLNj3B78u6bBI+hCm3dBrMkuMzG9xPPsOVX3FzIJJPp7wM+0OwqTGzqpW77gd7WZS\/he4xADnY\/IGCs\/EvLzTaHO\/DA6f9plLuD3FxLm9YIZn6jlWFuZxBdIwYiPk5W322lroVZuzaGhsGCAAP0U9715teavVs6\/JLScg5AWysNSFZgcDMq2+iSdp1SojUqirqtVPt6yGF7NyTpO3ZR2OUDzMqRSeqxHJPYUQIFNyKHJiHEIFcopcgVihkOJAlXBcsz59bRT\/KU5lFOdRSXBSZqp7YTGMkqdXooFNsJPx0f8ukigyE8iULzUWhnKJCFsIjG4T4CIaPZBkV9Q8KdodDe803HD+smRHXj3UfyIyfsOf7IXnGYBiMiMfVZnrvh7TqFNgpjEcET79ev0QPEbS4toUnlpcckHgexmZWX0jVHupbmTvB2uggEzJmeVe6S5rHb65cXHMQSR8AZj5U7vw016tNO8OU2NEue9xzLnOJP3\/mrq3tPLbtABOYnmSo1LUaZyGuzgSPU74\/z5hWdvXa8QI+kHPz1VscYjllUK106nScH7Nx5dUqEwDEegHjrx3VxVqACQYwq+43AY9R7k9\/ZVVajUqNLA5zQcE8nPKfCXHrRc7Mu9s54ttnXNdj6DQ6pScDv7exPX+60FrUug3LWEx3d\/RWVpa06bdrRwP8+qV9doBJMQqXosu5pUNFR4mqA0\/wDEkj7lUOu3kjy6Jg8Enj4zwVbajcOrHbTMN6x1QqGjyZP191y593p1YdTtQ6XopJD3OM8R\/hWlNoWN9DQXKwtLIMw0KZ+zLY8YZckeReMaNRrgXkT2H6pugaoaTg0n0lan\/Ua0G1pEAzGeViDR\/d7xy0wmymmwy32337RIlLQuFn9MvtzBJUunXyknVVy7jQecpdCqqRtbAU+0erz1C+Luk9SGlQaDlKaU6VEJQqpTyUGqUuRsTwuTNy5ZnkDGIvlpaYUhjE+ibV1agq+rThaGpSwqe8ZBU8oeVA8uVNo0kNjVKpHCSnNNNS6LfSgluJRGthsIMC491CdTySTzgAZKlXJIwFGognj6k8LVoudBujRafLHq+N3Pv3+FvNFLHAPEh2Nw3dSOuc\/AXnum1fxCCGxDnDk+w\/p91oPDd2XmY2MB2iOY7D\/kYifY9k0my26btjZzE9D3d\/xB6D8lIdUc3DGieDHH\/Ue3U\/3T7a0wDEGOBOB2T3WZP6I3jsJ+yVAr3FST6gB7TP0UdlaoOvJIEjgQrenpw6qQ2xA6LSZfy1yx\/hTUy73KYbYnmc9FoG2jUypRAEAI2X6Ey14q6Nj2wpbLeFNbQxyneXHKMxa5IrKfYZRm045KM0deiBcvxAI+qaQtrzz\/AFEY4+7fZY6iIoE9FpfHt+N4olpaejgQQqGrS20AwxJMhS5PVuLxX2FyWnJVtTucqr8iG\/zKYKpBUov8au3ryFcWNVZS0uMK5064V4lWrt3qYxyqLWorGk5UiVSJQqpTpQa5SZGxEBSoQK5Fnl9NSqaiUipLXKqWxXkQqS\/IlSr+72hZ2tfS6FPI2KyY2UfbAQbZ0hOc4kqNVEc7opFpHVRiE6gIBRYy7IkptozdjgfyQqxBUi14xjv8JaMGqsIe0N9g0fPf3Vzp1UU6oaDEfhJ4Hd5PfsPZQbakYLiZP4WTjnn+f5rrakdpY4eqZacSYzHxMI70Hr2TRcsEunCs20pXlvhXxGadQ0qp2taAJJ6gZJP3Xp9jdtqNDmkGRIXRLubc1mroYUYS7QjNJSE+yVgi2cAIdRkKS1\/smnuswAZ7obuyIGlx9k\/ywFhBcZEBRarA0ElTiFB1GoAw\/CaA8r8W16dxcCm0GQcwOe6iX7WvhjWmGDnhT6FmfOfW4JkgHMfCraRJc6TIJOVy55bydeGOsUSrS9BxA9yqyq2VY6i90bR1KjU7cgS7olNKS0q9Fc6fWVS5jWtngo9hWVcaWtrY1VbUHrMWFwr23qq0Sqx3oVdyaHoVw9LkOIwcuUYVEqzaec0ijF2FFpuUgKqCj1mocrPtdlazULTcFRP08gpLDSrKxqYUjzMqLa0yBCM3lSq0qTOV1RwATGcoN0+TtCDH06O7JwpttRO07SM\/5CjUaB5LunCk0i2kAXSc7vTn6FKZZMqB0MjaQI+vcIRdBDeHTII6ieFEdesd\/FtMyC7H0UmnXwN213ctzGVmHr2PntlmXCZ7z8K68MeITbPFKsdrZ2jdMz\/RUNlcua\/cwg\/MjHurlzKNxh8bh1bjPytM7hWuEzj1exvA8S0yFOY5ZDw5UFGmGOPGASefYd1ohdCFf8pe45rjYnF8IBMnHCYyTzhPe8BYC7gE0mUBj9xRi5Fg6lSFmvEdZxG0ZlaGvwszVtqlZ7mDDe\/9Eue9dGw1vtna903btaQ1wEZ7qivXeW0YG4\/5K2h8B0p3Oe8nk+pUms+HmBw2PMDkEzKheOzt0Tll6ZemHOI2y4\/HVdU0u5cT6Y+StDTpBjdrYHuOURpeRLZcRyB1Q3IbVrIV9Aq8uJP8kOhSdTw5eg07cu\/FDZ6OVVX8Mhz5dVgHja39ZVscbfidyk+oGn1VoLSqo1PQ2NHpc75Mf0TGywwVTWi72uhWQriqoba6HXrJchxSxWSqtFdchszIU3KVTKgUipdJys5kkslCdahFY5GaiVW17eFCIyrq4ZIVTXbClnFsKD5kFLQa0kud9EFyRtIkAThTUizpUGHJKlurtaBw3uqsVBTBzwFFt6T7g7nHa0dBOUBSbq\/aTBDXRwIlR69ZrfVtLOuCQFOPl0WS1uT+EdSe67T9HNWatf19Q0HDfosyvbePdlk1B1BH8irXTrmrOKbmH6EfZTHUxTYXNbHRv6Itlcm3bveJceJ9+inlYeSn2+u1aLgajXCD6cE\/J9ltdD8XMcfXzgZPE+yzFtrNJgL3NDn9Sei02l6bSvm7\/L2jndEGfYhLh70OfnbaUr4OEgptSrKqrXRXUQAyqXDs\/P5qW23d1d+S6447Ei0qRKe6tlVtRzqeSMdSgnUAm0VOvqpMNB5U6ztwwe6zReS8PBOOOyljVX8YWsHaZ4iujTpEt+Fg7elWqnAxOXHgT1nr9Fpru7NQQ4hw\/wBsCFANf8sABL+vfppyfjOgqWlU2wXkvd9hj26qW6GjAAHXbAUdjse\/uu86ccppjJ5A\/K32kuXBwPfuFEpXE4clr44\/t\/ZVXnw6T8FMGlt5k\/y6qvv+JRfMz8hAuciEKbH1EFdMq11Ce+CR2Qn1lOqxM89Iq01lyUyvpqTTXLldzJVNHYuXIlOcqq\/SrkuR8VUUVnAXLlCrwO5\/8ZVlpv8A42\/ASrkBRr7N0wHIjgrTsEBsYwZj4XLkL40Oux6KI6SE3XmiG4\/iC5cofYrPFC4YA9x+i9z0NgbQphoAGxuAABwkXK2CPInvUacpVyqkHdcH4WRssudOcnlcuT4hVm79P1TXpVyclQqv6fqmHouXJoUtLlcOUi5CmiBeHB+VV3XK5ck+qfB6fH0CWvwVy5NSxSah+L6KE9cuUqtACuXLkpn\/2Q==",
+            "readUrl": ""
+        },
+        {
+            "isbn": "9781449331818",
+            "title": "Learning JavaScript Design Patterns",
+            "author": "Addy Osmani",
+            "category": "Fantasy",
+            "type": "libro",
+            "status": "pendiente",
+            "progress": "undefined",
+            "rating": "5",
+            "coverUrl": "https:\/\/m.media-amazon.com\/images\/I\/81LpyFBbo8L._SL1500_.jpg",
+            "readUrl": "https:\/\/patterns.addy.ie\/"
+        },
+        {
+            "isbn": "9781491950296",
+            "title": "Programming JavaScript Applications",
+            "author": "Eric Elliott",
+            "category": "Drama",
+            "type": "libro",
+            "status": "pendiente",
+            "progress": "",
+            "rating": "4",
+            "coverUrl": "",
+            "readUrl": "http:\/\/chimera.labs.oreilly.com\/books\/1234000000262\/index.html"
+        },
+        {
+            "isbn": "9781593277574",
+            "title": "Understanding ECMAScript 6",
+            "author": "Nicholas C. Zakas",
+            "category": "Suspense",
+            "type": "libro",
+            "status": "terminado",
+            "progress": "100%",
+            "rating": "5",
+            "coverUrl": "",
+            "readUrl": "https:\/\/leanpub.com\/understandinges6\/read"
+        }
+    ]
+}
