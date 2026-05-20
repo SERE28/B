@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "isbn": "9781593277574",
+            "title": "Understanding ECMAScript 6",
+            "author": "Nicholas C. Zakas",
+            "category": "Suspense",
+            "type": "libro",
+            "status": "terminado",
+            "progress": "100%",
+            "rating": "5",
+            "coverUrl": "",
+            "readUrl": "https:\/\/leanpub.com\/understandinges6\/read"
+        }
+    ]
+}
