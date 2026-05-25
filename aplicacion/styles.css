@@ -1,0 +1,359 @@
+/* ============================================================
+   🎨 DESIGN SYSTEM
+   ============================================================ */
+:root {
+    --bg-gradient-start: #b8ddbb;
+    --bg-gradient-end:   #bdecc1;
+    --bg-solid:          #acdbaf;
+
+    --page-bg:           #fdfefb;
+    --page-border:       #e0f2e0;
+
+    --green-soft:        #e9f7e9;
+    --green-accent:      #a9dfab;
+    --green-strong:      #4caf50;
+    --green-title:       #78d87d;
+    --green-text:        #2e7d32;
+
+    --text-main:         #2e7d32;
+    --text-muted:        #5f8f63;
+
+    --shadow-soft:       0 2px 10px rgba(0,0,0,0.08);
+
+    --radius-small:      6px;
+    --radius-medium:     10px;
+    --radius-large:      12px;
+
+    --font-main:         system-ui, sans-serif;
+}
+
+/* ============================================================
+   🔄 RESET
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: radial-gradient(circle at 50% -20%, var(--bg-gradient-start), var(--bg-gradient-end));
+    min-height: 100vh;
+    font-family: var(--font-main);
+    color: var(--text-main);
+}
+
+/* ============================================================
+   🧱 APP SHELL
+   ============================================================ */
+.app-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* ============================================================
+   🟩 TOPBAR
+   ============================================================ */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-medium);
+    padding: 6px 12px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 16px;
+}
+
+.topbar-left, .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topbar-logo {
+    width: 24px;
+    height: 24px;
+    background: var(--green-strong);
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar-btn {
+    border: 1px solid var(--page-border);
+    background: white;
+    border-radius: 999px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.topbar-btn:hover { background: var(--green-soft); }
+
+.topbar-avatar {
+    width: 26px;
+    height: 26px;
+    background: var(--green-strong);
+    color: white;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================================
+   📐 LAYOUT
+   ============================================================ */
+.app-layout {
+    display: flex;
+    gap: 0;
+}
+
+/* ============================================================
+   📚 SIDEBAR
+   ============================================================ */
+.sidebar {
+    width: 230px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-medium);
+    padding: 16px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: auto;
+}
+
+.sidebar-link {
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-main);
+    display: block;
+}
+
+.sidebar-link:hover { background: var(--green-soft); }
+.sidebar-link.active { background: var(--green-soft); font-weight: bold; }
+
+/* ============================================================
+   ↔ DRAG LATERAL ENTRE SIDEBAR Y CONTENIDO
+   ============================================================ */
+.horizontal-divider {
+    width: 6px;
+    cursor: col-resize;
+    background: transparent;
+    transition: background 0.2s ease;
+}
+
+.horizontal-divider:hover {
+    background: var(--green-soft);
+}
+
+.horizontal-divider.active {
+    background: var(--green-accent);
+}
+
+/* ============================================================
+   📄 PAGE WRAPPER
+   ============================================================ */
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   🖼 COVER
+   ============================================================ */
+.header-cover {
+    height: 220px;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.header-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================
+   🏷 PAGE HEADER
+   ============================================================ */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.page-icon { font-size: 2.4rem; }
+.page-header-text h1 { color: var(--green-title); }
+
+/* ============================================================
+   📦 BLOCKS
+   ============================================================ */
+.block {
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: var(--radius-medium);
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-soft);
+    overflow-y: auto;
+    min-height: 60px;
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================================================
+   📝 TAREAS
+   ============================================================ */
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botón añadir tarea */
+.btn-add {
+    background: var(--green-title);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-add:hover { background: var(--green-strong); }
+
+/* Drag invisible */
+.drag-handle {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* ============================================================
+   ⋯ MENÚ DE CADA TAREA
+   ============================================================ */
+.tarea-menu-btn {
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: auto;
+}
+
+.tarea-menu-btn:hover { background: var(--green-soft); }
+
+/* ============================================================
+   🪟 MENÚ FLOTANTE
+   ============================================================ */
+#menu-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999999;
+}
+
+.floating-menu {
+    position: absolute;
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+    padding: 6px 0;
+    min-width: 180px;
+    pointer-events: auto;
+}
+
+.floating-menu button {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 10px 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.floating-menu button:hover { background: var(--green-soft); }
+
+/* ============================================================
+   📖 TABLA DE LECTURAS
+   ============================================================ */
+.tabla-lecturas {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla-lecturas th {
+    background: var(--green-soft);
+    color: var(--green-text);
+    padding: 8px;
+    border: 1px solid var(--page-border);
+}
+
+.tabla-lecturas td {
+    padding: 8px;
+    border: 1px solid var(--page-border);
+}
+
+/* ============================================================
+   ↕ DRAG ENTRE BLOQUES
+   ============================================================ */
+.vertical-divider {
+    height: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: row-resize;
+}
+
+.vertical-divider::before {
+    content: "──────── ⠿ ────────";
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+.tarea-proceso {
+    font-style: italic;
+    color: #3e7c85; /* cyan claro */
+}
+
+/* Botón ⋯ del bloque (mismo estilo que el de tareas) */
+.block-menu-btn {
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.block-menu-btn:hover {
+    background: var(--green-soft);
+    border-color: var(--green-accent);
+}
