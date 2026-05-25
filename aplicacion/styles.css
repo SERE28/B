@@ -90,15 +90,24 @@ body {
 
 .topbar-btn:hover { background: var(--green-soft); }
 
+/* Avatar */
 .topbar-avatar {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     background: var(--green-strong);
     color: white;
     border-radius: 999px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.topbar-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ============================================================
@@ -122,7 +131,34 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    overflow: auto;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.sidebar-title {
+    font-weight: 600;
+}
+
+.sidebar-add {
+    border: none;
+    background: var(--green-soft);
+    border-radius: 999px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .sidebar-link {
@@ -131,13 +167,17 @@ body {
     text-decoration: none;
     color: var(--text-main);
     display: block;
+    font-size: 0.9rem;
+    transition: background 0.15s ease, transform 0.1s ease;
 }
 
-.sidebar-link:hover { background: var(--green-soft); }
-.sidebar-link.active { background: var(--green-soft); font-weight: bold; }
+.sidebar-link:hover {
+    background: var(--green-soft);
+    transform: translateX(4px);
+}
 
 /* ============================================================
-   ↔ DRAG LATERAL ENTRE SIDEBAR Y CONTENIDO
+   ↔ DRAG LATERAL
    ============================================================ */
 .horizontal-divider {
     width: 6px;
@@ -167,7 +207,7 @@ body {
    🖼 COVER
    ============================================================ */
 .header-cover {
-    height: 220px;
+    height: 180px;
     border-radius: var(--radius-large);
     overflow: hidden;
     margin-bottom: 16px;
@@ -196,12 +236,23 @@ body {
 /* ============================================================
    📦 BLOCKS
    ============================================================ */
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resizable-block {
+    display: flex;
+    flex-direction: column;
+}
+
 .block {
     background: var(--page-bg);
     border: 1px solid var(--page-border);
     border-radius: var(--radius-medium);
     padding: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     box-shadow: var(--shadow-soft);
     overflow-y: auto;
     min-height: 60px;
@@ -211,6 +262,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Botón ⋯ */
+.block-menu-btn {
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.block-menu-btn:hover {
+    background: var(--green-soft);
+}
+
+/* Toolbar añadir bloque */
+.page-toolbar {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-add-block {
+    border: 1px solid var(--page-border);
+    background: white;
+    border-radius: 999px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.btn-add-block:hover {
+    background: var(--green-soft);
 }
 
 /* ============================================================
@@ -229,7 +313,6 @@ body {
     gap: 8px;
 }
 
-/* Botón añadir tarea */
 .btn-add {
     background: var(--green-title);
     color: white;
@@ -239,32 +322,17 @@ body {
     cursor: pointer;
 }
 
-.btn-add:hover { background: var(--green-strong); }
+.btn-add:hover {
+    background: var(--green-strong);
+}
 
-/* Drag invisible */
-.drag-handle {
-    width: 0;
-    height: 0;
-    display: none;
+.tarea-proceso {
+    font-style: italic;
+    color: #4dd0e1;
 }
 
 /* ============================================================
-   ⋯ MENÚ DE CADA TAREA
-   ============================================================ */
-.tarea-menu-btn {
-    background: var(--page-bg);
-    border: 1px solid var(--page-border);
-    border-radius: 6px;
-    padding: 4px 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-left: auto;
-}
-
-.tarea-menu-btn:hover { background: var(--green-soft); }
-
-/* ============================================================
-   🪟 MENÚ FLOTANTE
+   ⋯ MENÚ FLOTANTE
    ============================================================ */
 #menu-layer {
     position: fixed;
@@ -293,11 +361,17 @@ body {
     cursor: pointer;
 }
 
-.floating-menu button:hover { background: var(--green-soft); }
+.floating-menu button:hover {
+    background: var(--green-soft);
+}
 
 /* ============================================================
-   📖 TABLA DE LECTURAS
+   📖 TABLA
    ============================================================ */
+.table-wrapper {
+    position: relative;
+}
+
 .tabla-lecturas {
     width: 100%;
     border-collapse: collapse;
@@ -336,24 +410,37 @@ body {
     opacity: 0.7;
 }
 
-.tarea-proceso {
-    font-style: italic;
-    color: #3e7c85; /* cyan claro */
+/* ============================================================
+   🔍 MODAL DE BÚSQUEDA
+   ============================================================ */
+.search-modal {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 120px;
+    z-index: 999999;
 }
 
-/* Botón ⋯ del bloque (mismo estilo que el de tareas) */
-.block-menu-btn {
-    background: var(--page-bg);
+.search-modal.hidden {
+    display: none;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: var(--shadow-soft);
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid var(--page-border);
-    border-radius: 6px;
-    padding: 4px 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--text-main);
-    transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.block-menu-btn:hover {
-    background: var(--green-soft);
-    border-color: var(--green-accent);
+    font-size: 1rem;
 }

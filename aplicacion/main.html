@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
     <head>
         <meta charset="UTF-8">
         <title>Mi Notion Verde</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
 
         <div class="app-shell">
@@ -14,11 +12,19 @@
             <!-- TOP BAR -->
             <header class="topbar">
                 <div class="topbar-left">
+                    <span class="topbar-logo">N</span>
                     <span class="topbar-title">Mi Notion Verde</span>
                 </div>
                 <div class="topbar-right">
-                    <button class="topbar-btn">Buscar</button>
-                    <div class="topbar-avatar">?</div>
+                    <button class="topbar-btn" id="btn-search">Buscar</button>
+                    <button class="topbar-btn">Compartir</button>
+
+                    <div class="topbar-avatar" id="avatar">
+                        <span id="avatar-initial">M</span>
+                        <img id="avatar-img" alt="Avatar" style="display:none;">
+                    </div>
+                    <input type="file" id="avatar-input" accept="image/*"
+                        style="display:none">
                 </div>
             </header>
 
@@ -26,13 +32,37 @@
 
                 <!-- SIDEBAR -->
                 <aside class="sidebar">
+
+                    <!-- SECCIÓN FIJA -->
+                    <div class="sidebar-header">
+                        <span class="sidebar-title">Navegación</span>
+                    </div>
+
                     <nav class="sidebar-section">
                         <a href="biblioteca/frontend/index.html"
                             class="sidebar-link">📚 Mi biblioteca</a>
-                        <a href="#" class="sidebar-link">🎵 Mi playlist</a>
-                        <a href="#" class="sidebar-link">📺 Series</a>
-                        <a href="#" class="sidebar-link">🎮 Juegos</a>
+                        <a href="playlist/index.html" class="sidebar-link">🎵 Mi
+                            playlist</a>
+                        <a href="series/index.html" class="sidebar-link">📺
+                            Series</a>
+                        <a href="juegos/index.html" class="sidebar-link">🎮
+                            Juegos</a>
                     </nav>
+
+                    <!-- SECCIÓN ÍNDICE (GENERADA AUTOMÁTICAMENTE) -->
+                    <div class="sidebar-header">
+                        <span class="sidebar-title">Índice</span>
+                    </div>
+                    <nav id="sidebar-dynamic" class="sidebar-section"></nav>
+
+                    <!-- SECCIÓN PERSONAL -->
+                    <div class="sidebar-header">
+                        <span class="sidebar-title">Personal</span>
+                        <button id="btn-add-sidebar"
+                            class="sidebar-add">+</button>
+                    </div>
+                    <nav id="sidebar-user" class="sidebar-section"></nav>
+
                 </aside>
 
                 <!-- DRAG LATERAL -->
@@ -57,54 +87,61 @@
                         </div>
                     </section>
 
-                    <!-- PAGE CONTENT -->
-                    <main class="page-content">
+                    <!-- BOTÓN PARA CREAR NUEVOS BLOQUES -->
+                    <div class="page-toolbar">
+                        <button id="btn-add-block" class="btn-add-block">+
+                            Añadir bloque</button>
+                    </div>
 
-                        <!-- BLOQUE 1 -->
+                    <!-- PAGE CONTENT -->
+                    <main class="page-content" id="page-content">
+
+                        <!-- BLOQUE 1: BIBLIOTECA -->
                         <div class="resizable-block vertical">
-                            <section id="bloque-biblioteca"
-                                class="block"></section>
+                            <section class="block" id="bloque-biblioteca"
+                                data-title="📚 Biblioteca personal"></section>
                             <div class="vertical-divider"></div>
                         </div>
 
                         <!-- BLOQUE 2 — TAREAS -->
                         <div class="resizable-block vertical">
-                            <section class="block block-todos">
-
+                            <section class="block block-todos"
+                                id="bloque-tareas" data-title="✅ Tareas de hoy">
                                 <div class="block-header">
-                                    <h3>✅ Tareas de hoy</h3>
-
-                                    <div class="block-header-actions">
-                                        <button class="block-menu-btn"
-                                            id="menu-bloque-tareas">⋯</button>
-                                        <button id="btn-add-tarea"
-                                            class="btn-add">+</button>
-                                    </div>
+                                    <h3 contenteditable="true">✅ Tareas de
+                                        hoy</h3>
+                                    <button
+                                        class="block-menu-btn block-options">⋯</button>
                                 </div>
-
                                 <ul class="todo-list"></ul>
+                                <button id="btn-add-tarea"
+                                    class="btn-add">+</button>
                             </section>
-
                             <div class="vertical-divider"></div>
                         </div>
 
                         <!-- BLOQUE 3 — TABLA -->
                         <div class="resizable-block vertical">
-                            <section class="block block-table">
+                            <section class="block block-table" id="bloque-tabla"
+                                data-title="📖 Lecturas actuales">
                                 <div class="block-header">
-                                    <h3>📖 Lecturas actuales</h3>
+                                    <h3 contenteditable="true">📖 Lecturas
+                                        actuales</h3>
+                                    <button
+                                        class="block-menu-btn block-options">⋯</button>
                                 </div>
-
-                                <table class="tabla-lecturas">
-                                    <thead>
-                                        <tr>
-                                            <th>Título</th>
-                                            <th>Estado</th>
-                                            <th>Notas</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tabla-lecturas"></tbody>
-                                </table>
+                                <div class="table-wrapper">
+                                    <table class="tabla-lecturas">
+                                        <thead>
+                                            <tr>
+                                                <th>Título</th>
+                                                <th>Estado</th>
+                                                <th>Notas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabla-lecturas"></tbody>
+                                    </table>
+                                </div>
                             </section>
                         </div>
 
@@ -117,7 +154,14 @@
         <!-- CAPA PARA MENÚS FLOTANTES -->
         <div id="menu-layer"></div>
 
+        <!-- MODAL DE BÚSQUEDA -->
+        <div id="search-modal" class="search-modal hidden">
+            <div class="search-box">
+                <input type="text" id="search-input"
+                    placeholder="Buscar en la página...">
+            </div>
+        </div>
+
         <script src="app.js"></script>
     </body>
-
 </html>
