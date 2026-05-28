@@ -1,0 +1,556 @@
+/* 🎨 Variables */
+:root {
+  --color-fondo: #f5f5dc;
+  --color-tarjeta: #d2b48c;
+  --color-principal: #8b4513;
+  --color-texto: #5d4037;
+  --color-hover: #5d2e0a;
+
+  --modal-bg: white;
+  --modal-text: #333;
+  --modal-border: #d2b48c;
+  --modal-input-bg: white;
+  --modal-input-border: #d2b48c;
+}
+
+/* 🌙 Tema oscuro */
+.dark {
+  --color-fondo: #2f2a26;
+  --color-tarjeta: #7a6f67;
+  --color-principal: #d8a97a;
+  --color-texto: #f7ecdf;
+  --color-hover: #c8925c;
+
+  --modal-text: #f7ecdf;
+  --modal-border: #b89c7d;
+  --modal-input-bg: #5a514a;
+  --modal-input-border: #c8ad8c;
+}
+
+/* 🌐 Base */
+* {
+  box-sizing: border-box;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* 📱 Header */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark header {
+  background: #1c1a18;
+  color: var(--modal-text);
+}
+
+header * {
+  width: 100%;
+}
+
+.header-select,
+.search-bar,
+.sort-select {
+  padding: 12px;
+  border: 2px solid var(--color-tarjeta);
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: var(--color-texto);
+  cursor: pointer;
+}
+
+.dark .header-select,
+.dark .search-bar,
+.dark .sort-select {
+  background: var(--modal-input-bg);
+  border-color: var(--modal-input-border);
+  color: var(--modal-text);
+}
+
+/* ❤️ Favoritos */
+.fav-btn {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: var(--color-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: var(--color-hover);
+}
+
+/* 🔘 Botón único Grid / Lista */
+.view-toggle {
+  background: var(--color-tarjeta);
+  border: 2px solid var(--color-principal);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+.view-toggle:hover {
+  background: var(--color-principal);
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Header en escritorio */
+@media (min-width: 900px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-bar {
+    flex: 1;
+  }
+
+  .sort-select,
+  .header-select {
+    width: 250px;
+  }
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
+  color: var(--color-principal);
+}
+
+/* 🔘 Botones globales */
+button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+/* 📚 Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 🟫 Tarjetas */
+.card {
+  background-color: var(--color-tarjeta);
+  padding: 14px;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-principal);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.dark .card {
+  background-color: #1e1b19;
+  border-left-color: var(--color-principal);
+}
+
+/* 🖼️ Portada */
+.card-cover {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e0d6c3;
+}
+
+/* ❤️ Like */
+.like-btn {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.like-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.like-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Animación like */
+.like-btn.liked .like-icon {
+  animation: insta-like 0.45s ease-out;
+}
+
+@keyframes insta-like {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ⭐ Badges estado */
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.status-pendiente {
+  background: #6c757d;
+}
+.status-leyendo {
+  background: #007bff;
+}
+.status-pausa {
+  background: #ffc107;
+  color: #5d4037;
+}
+.status-leido {
+  background: #28a745;
+}
+.status-abandonado {
+  background: #dc3545;
+}
+
+/* Selector capítulo */
+.chapter-select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid var(--color-principal);
+  background: var(--color-tarjeta);
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+/* Progreso */
+.progress-container {
+  margin-top: 4px;
+}
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--color-principal);
+  transition: width 0.3s ease;
+}
+
+/* Chips orden */
+.sort-chips {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sort-chip {
+  padding: 10px 16px;
+  background: white;
+  border: 2px solid var(--color-principal);
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-principal);
+  width: 100%;
+  justify-content: center;
+}
+
+.dark .sort-chip {
+  background: #1f1c1a;
+  color: var(--color-texto);
+  border-color: var(--color-principal);
+}
+
+.sort-chip.active {
+  background: var(--color-principal);
+  color: white;
+  transform: scale(1.08);
+}
+
+@media (min-width: 900px) {
+  .sort-chips {
+    justify-content: flex-start;
+  }
+  .sort-chip {
+    width: auto;
+  }
+}
+
+/* 🌗 Botón tema */
+.theme-circle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-principal);
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+body.dark .theme-circle {
+  background: #d8c3a5;
+  color: #1a1816;
+}
+
+/* ========================================================= */
+/* 📄 MODO LISTA — BASE (PC)                                 */
+/* ========================================================= */
+
+.card.card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  padding: 14px;
+  align-items: flex-start;
+
+  /* FIX anti-desbordes */
+  max-width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.card-list .card-cover {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-list .info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* ❤️ Centrar corazón en PC/tablet */
+.card-list .like-btn {
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+/* ========================================================= */
+/* 📱 MÓVIL (≤ 600px) — versión bonita que te gustó          */
+/* ========================================================= */
+
+@media (max-width: 600px) {
+  .card.card-list {
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  /* Portada pequeña a la izquierda */
+  .card-list .card-cover {
+    width: 60px;
+    height: 85px;
+    display: block;
+  }
+
+  .card-list h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .card-list .author,
+  .card-list .category {
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+
+  .card-list .status-badge {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .card-list .progress-container {
+    width: 100%;
+  }
+
+  .card-list .chapter-select {
+    display: none;
+  }
+
+  .card-list .rating {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  /* Solo mostrar EDITAR */
+  .card-list button:not(.edit-btn):not(.like-btn) {
+    display: none;
+  }
+
+  .card-list .edit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* ❤️ En móvil vuelve arriba */
+  .card-list .like-btn {
+    top: 6px;
+    right: 6px;
+    transform: none;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ========================================================= */
+/* 📱 TABLET (600px – 900px)                                 */
+/* ========================================================= */
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .card.card-list {
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .card-list .card-cover {
+    width: 75px;
+    height: 100px;
+  }
+
+  .card-list .author {
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .card-list .category {
+    font-size: 0.9rem;
+  }
+
+  .card-list .rating {
+    font-size: 0.9rem;
+  }
+
+  .card-list button:nth-last-of-type(2) {
+    display: none;
+  }
+}
+
+/* ========================================================= */
+/* 🖥️ PC (≥ 900px)                                           */
+/* ========================================================= */
+
+@media (min-width: 900px) {
+  .card.card-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .card-list .card-cover {
+    width: 90px;
+    height: 120px;
+  }
+
+  .card-list .chapter-select {
+    display: block;
+  }
+
+  .card-list button {
+    display: block;
+  }
+}
+
+/* ========================================================= */
+/* 💻 Grid en pantallas grandes                              */
+/* ========================================================= */
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Separación entre tarjetas en modo lista */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 🔥 separación bonita */
+  padding-bottom: 10px;
+}

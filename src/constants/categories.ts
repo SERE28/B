@@ -1,0 +1,16 @@
+export const CATEGORIES = [
+  "Fantasía",
+  "Ciencia ficción",
+  "Romance",
+  "Thriller",
+  "Misterio",
+  "Terror",
+  "Aventura",
+  "Juvenil",
+  "Clásicos",
+  "Historia",
+  "Filosofía",
+  "No ficción",
+  "Autoayuda",
+  "Manga",
+];
